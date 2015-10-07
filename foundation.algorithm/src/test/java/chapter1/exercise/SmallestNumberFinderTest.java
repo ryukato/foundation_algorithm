@@ -7,34 +7,34 @@ import java.util.Random;
 import org.junit.Before;
 import org.junit.Test;
 
-public class LargestNumberFinderTest {
-	private LagestNumberFinder findLagestNumber;
+public class SmallestNumberFinderTest {
+	private SmallestNumberFinder smallestNumberFinder;
 	
 	@Before
 	public void setUp(){
-		findLagestNumber = new LagestNumberFinder(new MergeSorter<Integer>());
+		smallestNumberFinder = new SmallestNumberFinder(new MergeSorter<Integer>());
 	}
 	
 	@Test
 	public void test(){
-		final Integer expectedLargestNumber = 8;
-		Integer largestNumber = (Integer) findLagestNumber.find(new Integer[]{1,2,3,4,5,6,8,7});
-		assertEquals(expectedLargestNumber, largestNumber);
+		final Integer expectedSmallestNumber = 1;
+		Integer smallestNumber = (Integer) smallestNumberFinder.find(new Integer[]{1,2,3,4,5,6,8,7});
+		assertEquals(expectedSmallestNumber, smallestNumber);
 	}
 	
 	@Test
 	public void test_large_input(){
 		final int inputSize = 1000000;
 		Integer[] input = new Integer[inputSize];
-		input[0] = new Integer(inputSize);
+		input[0] = new Integer(0);
 		Random random = new Random();
 		for(int i = 1; i < inputSize; i++ ){
 			input[i] = new Integer(random.nextInt(inputSize - 1));
 		}
 		
 		long startTime = System.currentTimeMillis();
-		Integer largestNumber = (Integer) findLagestNumber.find(input);
+		Integer smallestNumber = (Integer) smallestNumberFinder.find(input);
 		System.out.println("time to find : " + (System.currentTimeMillis() - startTime) / 1000);
-		assertEquals(input[0], largestNumber);
+		assertEquals(input[0], smallestNumber);
 	}
 }
