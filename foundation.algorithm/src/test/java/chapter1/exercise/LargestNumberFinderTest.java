@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class LargestNumberFinderTest {
-	private LagestNumberFinder findLagestNumber;
+	private Finder<Integer> findLagestNumber;
 	
 	@Before
 	public void setUp(){}

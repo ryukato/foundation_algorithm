@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class SmallestNumberFinderTest {
-	private SmallestNumberFinder smallestNumberFinder;
+	private Finder<Integer> smallestNumberFinder;
 	
 	@Before
 	public void setUp(){}
