@@ -10,7 +10,7 @@ public class LagestNumberFinder extends AbstractFinder<Integer> {
 		super();
 	}
 	
-	public LagestNumberFinder(Sorter<Integer> sorter) {
+	public LagestNumberFinder(Sorter sorter) {
 		super(sorter);
 	}
 

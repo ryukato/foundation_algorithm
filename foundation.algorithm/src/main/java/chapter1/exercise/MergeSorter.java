@@ -1,8 +1,9 @@
 package chapter1.exercise;
 
-class MergeSorter<E> implements Sorter<E>{
-	 // stably merge a[lo .. mid] with a[mid+1 ..hi] using aux[lo .. hi]
-    private void merge(Comparable<E>[] a, Comparable<E>[] aux, int lo, int mid, int hi) {
+class MergeSorter implements Sorter{
+	@SuppressWarnings("rawtypes")
+	// stably merge a[lo .. mid] with a[mid+1 ..hi] using aux[lo .. hi]
+    private void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
         // copy to aux[]
         for (int k = lo; k <= hi; k++) {
             aux[k] = a[k]; 
@@ -26,8 +27,9 @@ class MergeSorter<E> implements Sorter<E>{
         }
     }
 
+    @SuppressWarnings("rawtypes")
     // mergesort a[lo..hi] using auxiliary array aux[lo..hi]
-    private void sort(Comparable<E>[] a, Comparable<E>[] aux, int lo, int hi) {
+	private void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
         if (hi <= lo){
         	return;
         }
@@ -41,11 +43,11 @@ class MergeSorter<E> implements Sorter<E>{
      * Rearranges the array in ascending order, using the natural order.
      * @param a the array to be sorted
      */
-    @Override
-	public Comparable<E>[] sort(Comparable<E>[] a) {
-    	Comparable<E>[] copy = a.clone();
-    	@SuppressWarnings("unchecked")
-    	Comparable<E>[] aux = new Comparable[a.length];
+    @SuppressWarnings("rawtypes")
+	@Override
+	public Comparable[] sort(Comparable[] a) {
+    	Comparable[] copy = a.clone();
+    	Comparable[] aux = new Comparable[a.length];
         sort(copy, aux, 0, a.length-1);
         return copy;
     }
@@ -56,9 +58,9 @@ class MergeSorter<E> implements Sorter<E>{
     ***************************************************************************/
     
     // is v < w ?
-    @SuppressWarnings("unchecked")
-	private boolean less(Comparable<E> v, Comparable<E> w) {
-        return v.compareTo((E) w) < 0;
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	private boolean less(Comparable v, Comparable w) {
+        return v.compareTo(w) < 0;
     }
 
 

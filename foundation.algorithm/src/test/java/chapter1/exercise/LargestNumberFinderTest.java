@@ -40,7 +40,7 @@ public class LargestNumberFinderTest {
 	
 	@Test
 	public void test_with_merge_sorter(){
-		findLagestNumber = new LagestNumberFinder(new MergeSorter<Integer>());
+		findLagestNumber = new LagestNumberFinder(new MergeSorter());
 		final Integer expectedLargestNumber = 8;
 		Integer largestNumber = (Integer) findLagestNumber.find(new Integer[]{1,2,3,4,5,6,8,7});
 		assertEquals(expectedLargestNumber, largestNumber);
@@ -48,7 +48,7 @@ public class LargestNumberFinderTest {
 	
 	@Test
 	public void test_large_input_with_merge_sorter(){
-		findLagestNumber = new LagestNumberFinder(new MergeSorter<Integer>());
+		findLagestNumber = new LagestNumberFinder(new MergeSorter());
 		final int inputSize = 1000000;
 		Integer[] input = new Integer[inputSize];
 		input[0] = new Integer(inputSize);

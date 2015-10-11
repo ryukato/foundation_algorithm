@@ -40,7 +40,7 @@ public class SmallestNumberFinderTest {
 	
 	@Test
 	public void test_with_merge_soter(){
-		smallestNumberFinder = new SmallestNumberFinder(new MergeSorter<Integer>());
+		smallestNumberFinder = new SmallestNumberFinder(new MergeSorter());
 		final Integer expectedSmallestNumber = 1;
 		Integer smallestNumber = (Integer) smallestNumberFinder.find(new Integer[]{1,2,3,4,5,6,8,7});
 		assertEquals(expectedSmallestNumber, smallestNumber);
@@ -48,7 +48,7 @@ public class SmallestNumberFinderTest {
 	
 	@Test
 	public void test_large_input_with_merge_soter(){
-		smallestNumberFinder = new SmallestNumberFinder(new MergeSorter<Integer>());
+		smallestNumberFinder = new SmallestNumberFinder(new MergeSorter());
 		final int inputSize = 1000000;
 		Integer[] input = new Integer[inputSize];
 		input[0] = new Integer(0);

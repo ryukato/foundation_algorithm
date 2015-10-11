@@ -7,7 +7,7 @@ public class SmallestNumberFinder extends AbstractFinder<Integer> {
 		super();
 	}
 	
-	public SmallestNumberFinder(Sorter<Integer> sorter) {
+	public SmallestNumberFinder(Sorter sorter) {
 		super(sorter);
 	}
 

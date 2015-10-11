@@ -2,13 +2,13 @@ package chapter1.exercise;
 
 @SuppressWarnings({ "unchecked", "rawtypes" })
 public abstract class AbstractFinder<E extends Comparable> implements Finder<E>{
-	private Sorter<E> sorter = new DefaultSorter<E>();
+	private Sorter sorter = new DefaultSorter();
 	
 	public AbstractFinder() {
 		super();
 	}
 	
-	public AbstractFinder(Sorter<E> sorter) {
+	public AbstractFinder(Sorter sorter) {
 		super();
 		this.sorter = sorter;
 	}
