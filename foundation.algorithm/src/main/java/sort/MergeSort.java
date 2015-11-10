@@ -24,11 +24,9 @@ public class MergeSort<E extends Comparable<E>> {
 				source[k] = tmp[i++];
 			}
 			else if(less(tmp[i], tmp[j])){
-				source[k] = tmp[i];
-				i++;
+				source[k] = tmp[i++];
 			}else{
-				source[k] = tmp[j];
-				j++;
+				source[k] = tmp[j++];
 			}
 		}
 	}
