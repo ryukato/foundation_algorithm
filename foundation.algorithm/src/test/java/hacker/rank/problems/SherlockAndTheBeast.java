@@ -1,7 +1,5 @@
 package hacker.rank.problems;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 
 public class SherlockAndTheBeast {

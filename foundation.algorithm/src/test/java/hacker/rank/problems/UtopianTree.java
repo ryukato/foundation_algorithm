@@ -10,7 +10,7 @@ public class UtopianTree {
 	public void test_(){
 		int cycle = 1;
 		int initHeight = 1;
-		int height = UtopianTree.grow(initHeight, cycle);
+		UtopianTree.grow(initHeight, cycle);
 	}
 
 	private static int grow(int initHeight, int cycle) {
